@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="contactImgHeight">120dp</dimen>
+    <dimen name="contactImgWidth">100dp</dimen>
+    <dimen name="lowMargin">10dp</dimen>
+    <dimen name="highMargin">20dp</dimen>
+    <dimen name="bigText">24dp</dimen>
+    <dimen name="smallText">18dp</dimen>
+    <dimen name="mConstrain">0dp</dimen>
+</resources>

@@ -17,7 +17,9 @@ class ContactListFragment : Fragment(R.layout.fragment_contact_list) {
     override fun onAttach(context : Context) {
         super.onAttach(context)
 
-        if (context is PersonSelect) cardClicListener = context
+        if (context is PersonSelect){
+            cardClicListener = context
+        }
     }
 
     override fun onViewCreated(view : View, savedInstanceState : Bundle?) {
@@ -25,7 +27,7 @@ class ContactListFragment : Fragment(R.layout.fragment_contact_list) {
 
         binding = FragmentContactListBinding.bind(view).apply {
             personCard.root.setOnClickListener {
-                cardClicListener?.onPersonSelected(1)//заменить на id будущего класса Person
+                cardClicListener?.onPersonSelected(1) //TODO заменить на id будущего класса Person
             }
         }
 

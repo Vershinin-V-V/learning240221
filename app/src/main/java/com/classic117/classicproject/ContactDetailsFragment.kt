@@ -11,11 +11,6 @@ private const val ARG_PERSON_ID = "id"
 
 class ContactDetailsFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater : LayoutInflater,
         container : ViewGroup?,
@@ -26,15 +21,15 @@ class ContactDetailsFragment : Fragment() {
 
     override fun onViewCreated(view : View, savedInstanceState : Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (activity as AppCompatActivity?)?.supportActionBar?.apply{
+        (activity as AppCompatActivity?)?.supportActionBar?.apply {
             setTitle(R.string.contact_details_bar)
         }
     }
 
     companion object {
-        fun newInstance(personId : Int) = ContactDetailsFragment().apply{
-            arguments = Bundle().apply{
-                putSerializable(ARG_PERSON_ID, 1) //заменить на id будущего класса Person
+        fun newInstance(personId : Int) = ContactDetailsFragment().apply {
+            arguments = Bundle().apply {
+                putSerializable(ARG_PERSON_ID, 1) //TODO заменить на id будущего класса Person
             }
         }
     }
